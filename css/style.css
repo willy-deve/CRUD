@@ -10,6 +10,7 @@
   border: 2px solid;
   border-radius: 5px;
   padding: 5px;
+  margin-bottom: 15px;
 }
 
 #titulo-recados {
@@ -40,10 +41,15 @@ h3 {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  flex-direction: column;
   text-align: center;
-  margin-top: 70px;
+  justify-content: center;
+  margin-top: 45px;
   margin-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
 
 #container-table {
@@ -63,11 +69,31 @@ thead {
   background-color: rgb(180, 216, 230);
 }
 
-#submit,
+#submit {
+  margin: 10px;
+  height: 40px;
+  width: 50px;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: rgba(29, 214, 238);
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  border: 2px solid black;
+}
+
 button {
   height: 40px;
   width: 50px;
   border-radius: 15px;
-  border: 2px solid;
   cursor: pointer;
+  background-color: rgba(29, 214, 238);
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  border: 2px solid black;
+  margin: 5px;
+}
+
+td,
+th {
+  border: 0.5px solid black;
 }
