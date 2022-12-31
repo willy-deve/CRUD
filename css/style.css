@@ -97,3 +97,19 @@ td,
 th {
   border: 0.5px solid black;
 }
+
+footer {
+  width: 100%;
+  background-color: rgb(127, 240, 255);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18px;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 15px;
+}
