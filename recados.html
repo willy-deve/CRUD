@@ -5,65 +5,70 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>recados</title>
 </head>
 
 <body>
 
-  <div>
+  <div id="titulo-recados">
     <h2>SISTEMA DE CADASTRO</h2>
   </div>
 
-  <div>
-
-    <div>
-
-      <form>
-        <label for="name">Name: </label>
-        <input type="text" id="name" name="name" placeholder="Digite aqui">
-
-        <label for="price">Price: </label>
-        <input type="number" id="price" name="price" placeholder="Digite aqui">
-
-        <label for="prime">É prime?</label>
-        <input type="checkbox" name="prime" id="prime">
-
-      </form>
-
-    </div>
-
-    <div>
-
-      <table>
-        <caption>
-          <h3>Listagem</h3>
-        </caption>
-
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Preço</th>
-            <th>Prime</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>celular</td>
-            <td>2000</td>
-            <td>sim</td>
-            <td><button>salvar</button></td>
-          </tr>
-        </tbody>
-      </table>
-
-    </div>
+  <div id="container-form">
 
 
+
+    <form id="form">
+
+      <label for="name">Name: </label>
+      <input type="text" id="name" name="name" placeholder="Digite aqui">
+
+      <label for="price">Price: </label>
+      <input type="number" id="price" name="price" placeholder="Digite aqui">
+
+      <label for="prime">É prime?</label>
+      <input type="checkbox" name="prime" id="prime">
+
+
+      <input id="submit" type="submit" value="Salvar">
+
+    </form>
+
+
+
+  </div>
+
+  <div id="container-table">
+
+    <h3>LISTAGEM</h3>
+
+    <table>
+
+
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Preço</th>
+          <th>Prime</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>celular</td>
+          <td>2000</td>
+          <td>sim</td>
+          <td>
+            <button>Excluir</button>
+            <button>Editar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
 </body>
