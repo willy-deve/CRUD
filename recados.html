@@ -28,20 +28,18 @@
       <input type="text" id="name" name="name" placeholder="Name">
 
       <!-- <label for="price">Price: </label> -->
-      <input type="number" id="price" name="price" placeholder="Price">
+      <input type="number" id="price" name="price" placeholder="Price R$">
 
       <label for="prime">É prime?</label>
       <input type="checkbox" name="prime" id="prime">
 
-
-
+      <input id="submit" type="submit" value="Salvar">
 
     </form>
-    <input id="submit" type="submit" value="Salvar">
-
-
 
   </div>
+
+
 
   <div id="container-table">
 
@@ -73,18 +71,8 @@
         </tr>
       </tbody>
 
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>celular</td>
-          <td>2000</td>
-          <td>sim</td>
-          <td>
-            <Button> <i class="bi bi-trash3-fill"></i></i></button>
-            <button><i class="bi bi-pencil-fill"></i></button>
-          </td>
-        </tr>
-      </tbody>
+      <tbody id="tbody"></tbody>
+
     </table>
   </div>
 
@@ -92,6 +80,7 @@
     <p>Criado por Willy da Silva &copy - 2022</p>
   </footer>
 
+  <script src="./js/recados.js"></script>
 </body>
 
 </html>
