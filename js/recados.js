@@ -1,5 +1,6 @@
 const form = document.querySelector('#form');
 const tabela = document.querySelector('#tbody')
+let idx = form.idx.value
 
 
 const atualizarLocalStorage = (produtos) => {
@@ -17,11 +18,27 @@ const salvarProduto = () => {
   const price = Number(form.price.value)
   const prime = form.prime.checked;
 
-  const produtos = recuperarLocalStorage();
-  produtos.push({ id: produtos.length + 1, name, price, prime });
-  atualizarLocalStorage(produtos);
-  form.reset();
-  preencherTabela();
+
+  if (idx == 'novo') {
+    const produtos = recuperarLocalStorage();
+    produtos.push({ id: produtos.length + 1, name, price, prime });
+    atualizarLocalStorage(produtos);
+    preencherTabela();
+    form.reset();
+
+  } else {
+    let produto = { id: idx, name, price, prime }
+
+    atualizarProduto(idx, produto)
+    preencherTabela();
+    form.reset();
+    idx = 'novo'
+  }
+
+
+
+
+
 }
 
 const removerProduto = (id) => {
@@ -30,13 +47,11 @@ const removerProduto = (id) => {
   if (indexProduto < 0) return;
   produtos.splice(indexProduto, 1)
   atualizarLocalStorage(produtos)
+  alert("produto removido")
   preencherTabela();
 
 }
 
-const editarProduto = () => {
-  console.log("clicou")
-}
 
 const preencherTabela = () => {
   const produtos = recuperarLocalStorage();
@@ -57,6 +72,23 @@ const preencherTabela = () => {
     
     `;
   }
+}
+
+const editarProduto = (id) => {
+  const produtos = recuperarLocalStorage();
+  const indexProduto = produtos.findIndex((produto) => produto.id === id)
+  form.name.value = produtos[indexProduto].name;
+  form.price.value = produtos[indexProduto].price;
+  form.prime.checked = produtos[indexProduto].prime;
+  idx = id
+}
+
+const atualizarProduto = (id, produto) => {
+  const produtos = recuperarLocalStorage();
+  const indexProduto = produtos.findIndex((p) => p.id === id)
+  produtos[indexProduto] = produto
+  atualizarLocalStorage(produtos)
+
 }
 
 
